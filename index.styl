@@ -10,7 +10,7 @@
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
 
-.navbar {
+.navbar
   position: relative;
   z-index: $zindex-navbar;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
@@ -20,10 +20,18 @@
   // Prevent floats from breaking the navbar
   clearfix();
 
-  @media $media-min-grid-float-breakpoint {
+  @media $media-min-grid-float-breakpoint
     border-radius: $navbar-border-radius;
-  }
-}
+
+  .separator
+    width 1px
+    background $gray-light
+    height ($navbar-height / 2)
+    margin ($navbar-height / 4) 10px 0
+
+  .navbar-button-container
+    padding 10px 15px
+
 
 
 // Navbar heading
